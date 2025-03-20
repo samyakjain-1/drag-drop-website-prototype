@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+Drag-and-Drop Website Builder Prototype
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 Project Overview
 
-## Available Scripts
+This project is a prototype of a drag-and-drop website builder built using React, transforming the traditional form-based interface into a more flexible, visual, and intuitive web design tool.
 
-In the project directory, you can run:
+It is designed as part of the Websites.co.in platform modernization effort to allow users more control over their website design without needing to write code.
 
-### `npm start`
+🚀 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Drag-and-drop elements: Add Text, Image, and Button components onto the canvas.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Element property editing: Modify content or URLs through form-based side panel editing.
 
-### `npm test`
+Canvas reordering: Reposition elements via drag-and-drop using react-beautiful-dnd.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Responsive layout: Works on both desktop and mobile devices.
 
-### `npm run build`
+HTML export: Download the built website layout as a standalone .html file.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🧱 Architecture
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application is structured with reusable and modular components:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Sidebar.js - Provides draggable elements.
 
-### `npm run eject`
+Canvas.js - Renders the main builder area and supports drag-drop, editing, and export.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Builder.js - Layout wrapper that combines Sidebar and Canvas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+State management is handled using useState hooks in React for simplicity.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🛠 Tools & Libraries Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React (v19) – Frontend framework
 
-## Learn More
+react-beautiful-dnd – For drag-and-drop support within canvas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+HTML5 Drag-and-Drop API – For dragging from sidebar to canvas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+CSS Flexbox & Media Queries – For responsive layout
 
-### Code Splitting
+📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📤 Export Feature (HTML Generation)
 
-### Analyzing the Bundle Size
+A button in the canvas area lets the user export their layout.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+It generates a clean HTML file using the element structure (text, images, buttons).
 
-### Making a Progressive Web App
+HTML is saved using Blob and URL.createObjectURL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📱 Responsiveness
 
-### Advanced Configuration
+Flex layout adapts to screen size.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+On small screens, sidebar and canvas stack vertically.
 
-### Deployment
+📈 Scalability Considerations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Easy to add more element types (e.g., videos, sections, cards).
 
-### `npm run build` fails to minify
+Templates and themes can be added in future iterations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Can integrate a backend for saving/loading layouts or publishing.
+
+📝 Conclusion
+
+This project demonstrates a flexible and scalable UI prototype that bridges traditional form-based content editing with modern visual web design principles, paving the way for enhanced user experience on the Websites.co.in platform.
+
+
