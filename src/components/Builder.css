@@ -1,0 +1,13 @@
+.builder-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  @media (max-width: 768px) {
+    .builder-container {
+      flex-direction: column;
+    }
+  }
+  
